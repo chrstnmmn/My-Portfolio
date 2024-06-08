@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  background-color: #f7e4be;
+  background-image: url(svgbackgrounds/Background.svg);
+}
+
+.header {
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  position: absolute;
+  z-index: -1;
+  top: 1;
+}
+
+.textHeader {
+  margin-left: 90px;
+  margin-right: 60px;
+  position: absolute;
+
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 48px;
+
+  font-family: "Karma", serif;
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  color: #342f2f;
+}
+.Title {
+  margin-top: 150px;
+  margin-left: 270px;
+  margin-right: 270px;
+  position: absolute;
+}
+
+.titleBackground {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+.titleText {
+  text-align: center;
+  margin-top: 35px;
+  margin-left: 100px;
+
+  font-size: 180px;
+  font-family: "Katibeh", serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  color: #342f2f;
+}
+
+.Intro {
+  margin-top: 750px;
+  margin-left: 150px;
+  margin-right: 60px;
+  position: absolute;
+}
+
+.book {
+  position: absolute;
+  z-index: -1;
+}
+
+.profile {
+  margin-top: 150px;
+  margin-left: 190px;
+}
+
+.nametag {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 230px;
+
+  z-index: -1;
+}
+
+.textName {
+  position: absolute;
+  margin-top: -97px;
+  margin-left: 23px;
+
+  font-family: "Karma", serif;
+  font-size: 26px;
+  font-weight: 1000;
+  font-style: normal;
+  color: #342f2f;
+}
+
+.introStatement {
+  margin-top: -420px;
+  margin-left: 620px;
+  margin-right: 250px;
+
+  font-family: "Karma", serif;
+  font-size: 19px;
+  font-weight: 600;
+  font-style: normal;
+  color: #342f2f;
+}
