@@ -1,106 +1,540 @@
 body {
-  margin: 0;
-  background-color: #f7e4be;
-  background-image: url(svgbackgrounds/Background.svg);
+  background-color: #ff7891;
+  overflow-x: hidden;
 }
 
-.header {
-  margin-top: 10px;
-  margin-left: 60px;
-  margin-right: 60px;
-  position: absolute;
-  z-index: -1;
-  top: 1;
+/*xxs*/
+@media (min-width: 360px) {
+  #loadingscreenelements {
+    pointer-events: none;
+    text-align: center;
+  }
+  #flowerIcon {
+    position: absolute;
+    left: 0;
+    margin-top: -85px;
+  }
+  .Flowerloadingicon {
+    width: 35%;
+  }
+  .cloudloading1 {
+    position: absolute;
+    margin-top: -140px;
+    margin-bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .loadingtext {
+    color: #fbf9f9;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    font-family: "Pacifico";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 97.001%; /* 62.081px */
+    text-align: center;
+    margin-top: 355px;
+  }
+
+  .loginsection {
+    color: #fbf9f9;
+    text-align: center;
+    margin-top: 210px;
+  }
+  .loginsection #Title {
+    margin-top: -20px;
+    margin-bottom: 0;
+
+    /* TextShadow */
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    font-family: "Pacifico";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 97.001%; /* 62.081px */
+  }
+
+  #subTitle {
+    margin-top: 0;
+    text-align: center;
+
+    /* TextShadow */
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans 3";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .userNameInput {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  input {
+    font-size: 16px;
+    color: #ff7891;
+    font-family: "Pacifico";
+    text-align: center;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    height: 34px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 22px;
+    width: 250px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 0 18px;
+  }
+
+  input::-webkit-input-placeholder {
+    color: rgba(255, 120, 145, 0.75);
+  }
+
+  #reject {
+    display: none;
+    margin-top: 5px;
+    text-align: center;
+    color: #fbf9f9;
+    font-family: "Source Sans 3";
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  #enterButton {
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0px 0px 6.6px 0px #fbf9f9;
+    background-color: #ff6b86;
+    border-color: #fbf9f9;
+    border-style: solid;
+    border-radius: 69px;
+    color: #fbf9f9;
+    text-align: center;
+    font-family: "Pacifico";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 97.001%; /* 15.52px */
+    width: 100px;
+    height: 30px;
+  }
+
+  #enterButton:active {
+    background-color: #fbf9f9;
+    color: #ff6b86;
+  }
+
+  .result {
+    color: #fbf9f9;
+    margin-top: 400px;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .result #resultText {
+    font-family: "Pacifico";
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-bottom: 0px;
+  }
+
+  .result #gender {
+    margin-top: 15px;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans 3";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .result #userNameText {
+    margin-top: -35px;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans 3";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  .result #seatNumber {
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans 3";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 0px;
+  }
+
+  .result #seatNumberText {
+    margin-top: -50px;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: Pacifico;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  #reminders {
+    color: #fbf9f9;
+    text-align: center;
+  }
+
+  #reminder01 {
+    font-family: "Source Sans 3";
+    font-size: 14px;
+    font-weight: 400px;
+    margin-top: 660px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #reminderTitles {
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: Pacifico;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: -25px;
+  }
+
+  #containerReminder {
+    color: #fbf9f9;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+    font-family: "Source Sans 3";
+    margin-top: 40px;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+
+  #containerReminder h2 {
+    text-align: center;
+    margin-bottom: -10px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  #containerReminder p {
+    text-align: center;
+    text-align: justify;
+    margin-bottom: -10px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400px;
+    line-height: normal;
+  }
+
+  #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-family: "Source Sans 3";
+    color: #ff6b86;
+    background-color: #fbf9f9;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .loginImageContainer {
+    pointer-events: none;
+  }
+
+  .Flowers1 {
+    top: -60px;
+    left: -130px;
+    width: 85%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Flowers2 {
+    top: -60px;
+    right: -130px;
+    width: 85%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Cloud1 {
+    top: 450px;
+    left: -390px;
+    width: 350%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Cloud2 {
+    top: 610px;
+    left: -390px;
+    width: 350%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Cloud3 {
+    top: 580px;
+    left: -390px;
+    width: 350%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower5 {
+    transform: scaleX(-1);
+    top: 450px;
+    left: -35px;
+    opacity: 0.5;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower6 {
+    transform: scaleX(-1);
+    transform: rotate(20deg);
+    top: 555px;
+    left: 75px;
+    opacity: 0.5;
+    width: 30%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower7 {
+    transform: rotateY(-180deg);
+    transform: rotate(-40deg);
+    top: 525px;
+    right: 50px;
+    opacity: 0.5;
+    width: 30%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower8 {
+    transform: rotateY(-180deg);
+    transform: rotate(-40deg);
+    top: 450px;
+    right: -50px;
+    opacity: 0.5;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower9 {
+    transform: rotateY(-180deg);
+    transform: rotate(-40deg);
+    top: 470px;
+    right: 10px;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower10 {
+    transform: rotate(40deg);
+    top: 470px;
+    left: -60px;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower11 {
+    transform: rotate(-15deg);
+    top: 415px;
+    right: -45px;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower12 {
+    transform: rotate(30deg);
+    top: 480px;
+    left: 20px;
+    width: 40%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .invitationContainer {
+    pointer-events: none;
+  }
+
+  .Ribbon1 {
+    position: absolute;
+    top: 750px;
+    left: 0px;
+    width: 100%;
+    z-index: -5;
+  }
+
+  .crown1 {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 950px;
+    width: 75%;
+    z-index: -1;
+  }
+
+  .Cloud4 {
+    top: 1370px;
+    left: -510px;
+    width: 350%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .Cloud5 {
+    top: 1500px;
+    left: -550px;
+    width: 350%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .Cloud6 {
+    top: 1550px;
+    left: -530px;
+    width: 350%;
+    position: absolute;
+    z-index: -3;
+  }
+
+  .flower13 {
+    transform: scaleX(-1);
+    top: 1350px;
+    left: -90px;
+    width: 80%;
+    position: absolute;
+    z-index: -4;
+  }
+
+  .flower14 {
+    top: 1340px;
+    right: 40px;
+    width: 50%;
+    position: absolute;
+    z-index: -4;
+  }
+
+  .flower15 {
+    transform: rotate(-20deg);
+    top: 1265px;
+    right: -80px;
+    width: 50%;
+    position: absolute;
+    z-index: -4;
+  }
+
+  .remainderContainerElements {
+    pointer-events: none;
+  }
+
+  .crown2 {
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    top: 2110px;
+    width: 55%;
+    z-index: -1;
+  }
+
+  .flower16 {
+    top: 2150px;
+    left: -270px;
+    width: 125%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .flower17 {
+    transform: scaleX(-1) rotate(-50deg);
+    top: 2380px;
+    left: -150px;
+    width: 60%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .leaves1 {
+    transform: rotate(20deg);
+    top: 2320px;
+    left: -145px;
+    width: 60%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .leaves2 {
+    transform: rotate(-25deg);
+    top: 2200px;
+    right: -155px;
+    width: 80%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .flower18 {
+    transform: rotate(-20deg);
+    top: 2300px;
+    right: -140px;
+    width: 60%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .flower19 {
+    top: 2450px;
+    right: -280px;
+    width: 130%;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
-.textHeader {
-  margin-left: 90px;
-  margin-right: 60px;
-  position: absolute;
-
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 48px;
-
-  font-family: "Karma", serif;
-  font-size: 28px;
-  font-weight: 700;
-  font-style: normal;
-  color: #342f2f;
-}
-.Title {
-  margin-top: 150px;
-  margin-left: 270px;
-  margin-right: 270px;
-  position: absolute;
+/*xs*/
+@media (min-width: 457px) {
 }
 
-.titleBackground {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: -1;
+/*sm*/
+@media (min-width: 640px) {
 }
 
-.titleText {
-  text-align: center;
-  margin-top: 35px;
-  margin-left: 100px;
-
-  font-size: 180px;
-  font-family: "Katibeh", serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-
-  color: #342f2f;
+/*md*/
+@media (min-width: 768px) {
 }
 
-.Intro {
-  margin-top: 750px;
-  margin-left: 150px;
-  margin-right: 60px;
-  position: absolute;
+/*lg*/
+@media (min-width: 1024px) {
 }
 
-.book {
-  position: absolute;
-  z-index: -1;
+/*xl*/
+@media (min-width: 1280px) {
 }
 
-.profile {
-  margin-top: 150px;
-  margin-left: 190px;
-}
-
-.nametag {
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 230px;
-
-  z-index: -1;
-}
-
-.textName {
-  position: absolute;
-  margin-top: -97px;
-  margin-left: 23px;
-
-  font-family: "Karma", serif;
-  font-size: 26px;
-  font-weight: 1000;
-  font-style: normal;
-  color: #342f2f;
-}
-
-.introStatement {
-  margin-top: -420px;
-  margin-left: 620px;
-  margin-right: 250px;
-
-  font-family: "Karma", serif;
-  font-size: 19px;
-  font-weight: 600;
-  font-style: normal;
-  color: #342f2f;
+/*2xl*/
+@media (min-width: 1536px) {
 }
