@@ -1,5 +1,6 @@
 body {
   background-color: #ff7891;
+  touch-action: pan-y;
   overflow-x: hidden;
 }
 
