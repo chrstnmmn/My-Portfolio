@@ -5,13 +5,14 @@ const mainPage = document.getElementById("mainPage");
 const preloader = document.getElementById("preloadScreen");
 
 //document.addEventListener("DOMContentLoaded", ready);
+preloader.style.display = "none";
 mainPage.style.display = "block";
 
 /*function ready() {
   setTimeout(() => {
     showMainPage();
   }, 3000);
-}*/
+} */
 
 window.onload = function () {
   //window.scrollTo({ top: targetY, behavior: "smooth" });
@@ -65,6 +66,10 @@ function checkName() {
     outputName.innerHTML = name;
     tableNumber.innerHTML = guestList[name];
   }
+}
+
+function ScrollToTop() {
+  window.scrollTo({ top: targetY, behavior: "smooth" });
 }
 
 //lists of names that is invited
