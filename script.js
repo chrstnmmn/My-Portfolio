@@ -25,6 +25,10 @@ function showMainPage() {
   mainPage.style.display = "block";
 }
 
+function ScrollToTop() {
+  window.scrollTo({ top: targetY, behavior: "smooth" });
+}
+
 //when the button is clicked, the website will check if it's invited or not
 function checkName() {
   const name = document.getElementById("userName").value.trim();
@@ -68,9 +72,6 @@ function checkName() {
   }
 }
 
-function ScrollToTop() {
-  window.scrollTo({ top: targetY, behavior: "smooth" });
-}
 
 //lists of names that is invited
 const guestList = {
@@ -132,7 +133,7 @@ const guestList = {
   "Hannah Tolentino": 5,
   "John Troy Laurio": 5,
   "Kristine Herrero": 5,
-  "Mark Joseph Basig": 5,
+  "Marck Joseph Basig": 5,
   "Joey Boy Fernandez": 5,
   "Miguel Pua": 5,
   "Jay - jay Dawal": 5,
@@ -163,6 +164,7 @@ const guestList = {
   "Therese Joie Cortez": 8,
   "Arleen Cansicio": 8,
   "Andrea Nicole Gudio": 8,
+  "KC Dalida": 8,
 
   //Table 09
   "Dougle Dela Cruz": 9,
