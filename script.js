@@ -6,6 +6,7 @@ const preloader = document.getElementById("preloadScreen");
 
 function load(url) {
     // display loading image here...
+    mainPage.visible = false;
     preloader.style.display = "block";
     // request your data...
     var req = new XMLHttpRequest();
@@ -15,8 +16,8 @@ function load(url) {
         if (req.readyState == 4 && req.status == 200) {
             // content is loaded...hide the gif and display the content...
             if (req.responseText) {
-                bodyElement.style.display = "block";
-                preloader.style.display = "none";
+              mainPage.visible = true;
+              preloader.visible = true;
             }
         }
     };
