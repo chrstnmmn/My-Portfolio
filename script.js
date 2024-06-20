@@ -4,30 +4,34 @@ const bodyElement = document.getElementById("mainContent");
 const mainPage = document.getElementById("mainPage");
 const preloader = document.getElementById("preloadScreen");
 
-//document.addEventListener("DOMContentLoaded", ready);
-preloader.style.display = "none";
-mainPage.style.display = "block";
+function load(url) {
+    // display loading image here...
+    preloader.style.display = "block";
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
 
-/*function ready() {
-  setTimeout(() => {
-    showMainPage();
-  }, 3000);
-} */
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                bodyElement.style.display = "block";
+                preloader.style.display = "none";
+            }
+        }
+    };
+    request.send(vars);
+}
 
 window.onload = function () {
-  //window.scrollTo({ top: targetY, behavior: "smooth" });
+  ScrollToTop();
   preloader.style.display = "none";
-  bodyElement.style.display = "block";
+  bodyElement.style.display = "none";
 };
-
-function showMainPage() {
-  preloader.style.display = "none";
-  mainPage.style.display = "block";
-}
 
 function ScrollToTop() {
   window.scrollTo({ top: targetY, behavior: "smooth" });
-}
+} 
 
 //when the button is clicked, the website will check if it's invited or not
 function checkName() {
@@ -110,7 +114,7 @@ const guestList = {
   "Dale Merced": 2,
 
   //Table 03
-  "Jennica Conception": 3,
+  "Jennica Concepcion": 3,
   "Angel Daugdaug": 3,
   "Ella Daugdaug": 3,
   "Jazmine Daugdaug": 3,
@@ -118,6 +122,7 @@ const guestList = {
   "Clarize Romero": 3,
   "Sophia Kimberly Borbe": 3,
   "Airabelle Caparas": 3,
+  "KC Dalida": 3,
 
   //Table 04
   "Joshua Paul De Borja": 4,
@@ -164,7 +169,7 @@ const guestList = {
   "Therese Joie Cortez": 8,
   "Arleen Cansicio": 8,
   "Andrea Nicole Gudio": 8,
-  "KC Dalida": 8,
+  
 
   //Table 09
   "Dougle Dela Cruz": 9,
